@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    {% include 'mainapp/includes/links.html' %}
+
+    <title>Welcome to GeekLab!</title>
+</head>
+
+<body>
+
+{% include 'mainapp/includes/messages.html' %}
+<div class="text-center">
+    <p>
+        <a href="/static"><img src="{% static 'img/logo.png' %}" alt=""></a>
+    </p>
+    <h2>{{ title }}</h2>
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+<!-- JavaScript section -->
+<!-- Bootstrap -->
+{% include 'mainapp/includes/scripts.html' %}
+
+</body>
+
+</html>
